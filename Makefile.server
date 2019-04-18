@@ -6,7 +6,7 @@ SOURCEOBJ = ./obj/
 SOURCES		= $(SOURCEDIR)server.cpp $(SOURCEDIR)tcpstream.cpp $(SOURCEDIR)tcpacceptor.cpp
 INCLUDES	= -I.
 OBJECTS		= $(SOURCES:.cpp=.o)
-TARGET		= $(SOURCEDIR)server
+TARGET		= server
 
 all: $(SOURCES) $(TARGET)
 
