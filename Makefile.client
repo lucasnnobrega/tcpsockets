@@ -11,10 +11,11 @@ all: $(SOURCES) $(TARGET)
 
 $(TARGET): $(OBJECTS) 
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	mv ./src/*.o ./obj
 
-.cpp.o:
-	$(CC) $(CFLAGS) $(INCLUDES) $< -o $@
+#.cpp.o:
+#	$(CC) $(CFLAGS) $(INCLUDES) $< -o $@
 
 clean:
-	rm -rf $(OBJECTS) $(TARGET)
+	rm -rf ./obj/* $(OBJECTS) $(TARGET)
 
