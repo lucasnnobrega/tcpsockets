@@ -23,7 +23,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "tcpacceptor.h"
+#include <iostream>
+#include "../include/tcpacceptor.h"
 
 int main(int argc, char** argv)
 {
@@ -31,6 +32,11 @@ int main(int argc, char** argv)
         printf("usage: server <port> [<ip>]\n");
         exit(1);
     }
+    
+    //printf("port: ", &argv);
+
+    std::cout << "port: " << argv[1] << std::endl;
+    std::cout << "ip: " << argv[2] << std::endl;
 
     TCPStream* stream = NULL;
     TCPAcceptor* acceptor = NULL;

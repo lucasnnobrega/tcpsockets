@@ -1,7 +1,8 @@
 CC		= g++
 CFLAGS		= -g -c -Wall
 LDFLAGS		= 
-SOURCES		= client.cpp tcpstream.cpp tcpconnector.cpp
+SOURCEDIR = ./src/
+SOURCES		= $(SOURCEDIR)client.cpp $(SOURCEDIR)tcpstream.cpp $(SOURCEDIR)tcpconnector.cpp
 INCLUDES	= -I.
 OBJECTS		= $(SOURCES:.cpp=.o)
 TARGET		= client

@@ -1,7 +1,8 @@
 CC		= g++
 CFLAGS		= -g -c -Wall 
 LDFLAGS		= 
-SOURCES		= server.cpp tcpstream.cpp tcpacceptor.cpp
+SOURCEDIR = ./src/
+SOURCES		= $(SOURCEDIR)server.cpp $(SOURCEDIR)tcpstream.cpp $(SOURCEDIR)tcpacceptor.cpp
 INCLUDES	= -I.
 OBJECTS		= $(SOURCES:.cpp=.o)
 TARGET		= server
@@ -16,4 +17,5 @@ $(TARGET): $(OBJECTS)
 
 clean:
 	rm -rf $(OBJECTS) $(TARGET)
+
 

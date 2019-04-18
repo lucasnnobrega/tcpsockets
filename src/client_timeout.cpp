@@ -29,7 +29,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-#include "tcpconnector.h"
+#include "../include/tcpconnector.h"
 
 using namespace std;
 

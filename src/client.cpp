@@ -23,7 +23,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
-#include "tcpconnector.h"
+#include "../include/tcpconnector.h"
+#include <iostream>
 
 using namespace std;
 
@@ -33,6 +34,10 @@ int main(int argc, char** argv)
         printf("usage: %s <port> <ip>\n", argv[0]);
         exit(1);
     }
+
+    std::cout << "port : " << argv[1] << std::endl;
+    std::cout << "ip   : " << argv[2] << std::endl;
+
 
     int len;
     string message;
